@@ -1,0 +1,5 @@
+# 配置不需要检测的文件
+build
+node_modules
+dist
+webpack.config.js
