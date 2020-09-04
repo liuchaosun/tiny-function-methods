@@ -19,7 +19,7 @@ let libraryName = (function (str) {
 })(name);
 
 module.exports = {
-  mode: "none",
+  mode: "development",
   entry: {
     [chunkName]: "./src/index.ts",
     [`${chunkName}.min`]: "./src/index.ts",
