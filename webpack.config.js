@@ -1,7 +1,7 @@
-"use strict";
-const path = require("path");
-const { name, version } = require("./package.json");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+'use strict';
+const path = require('path');
+const { name, version } = require('./package.json');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 
 let chunkName = `${name}-v${version}`;
@@ -19,23 +19,23 @@ let libraryName = (function (str) {
 })(name);
 
 module.exports = {
-  mode: "development",
+  mode: 'none',
   entry: {
-    [chunkName]: "./src/index.ts",
-    [`${chunkName}.min`]: "./src/index.ts",
+    [chunkName]: './src/index.js',
+    [`${chunkName}.min`]: './src/index.js',
   },
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, 'dist'),
     filename: '[name].js',
     library: libraryName,
     libraryTarget: 'umd',
-    libraryExport: 'default'
+    libraryExport: 'default',
   },
   module: {
     rules: [
       {
-        test: /\.ts$/,
-        use: ["babel-loader", "eslint-loader"],
+        test: /\.js$/,
+        use: ['babel-loader', 'eslint-loader'],
         exclude: /node_modules/,
       },
     ],
@@ -45,9 +45,9 @@ module.exports = {
     minimizer: [
       new TerserPlugin({
         // 只压缩min版本
-        include: /\.min.js$/
-      })
-    ]
+        include: /\.min.js$/,
+      }),
+    ],
   },
   plugins: [new CleanWebpackPlugin()],
 };
