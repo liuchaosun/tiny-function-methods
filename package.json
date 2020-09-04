@@ -1,25 +1,25 @@
 {
-  "name": "tiny-functions",
-  "version": "0.1.0",
+  "name": "tiny-function-methods",
+  "version": "0.1.1",
   "description": "一个小而精美的函数集合",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "precommit": "lint-staged",
     "build": "webpack",
-    "prepublish":"webpack"
+    "prepublish": "webpack"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/liuchaosun/tiny-functions.git"
+    "url": "git+https://github.com/liuchaosun/tiny-function-methods.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/liuchaosun/tiny-functions/issues"
+    "url": "https://github.com/liuchaosun/tiny-function-methods/issues"
   },
-  "homepage": "https://github.com/liuchaosun/tiny-functions#readme",
+  "homepage": "https://github.com/liuchaosun/tiny-function-methods#readme",
   "devDependencies": {
     "@babel/cli": "^7.11.5",
     "@babel/core": "^7.11.5",

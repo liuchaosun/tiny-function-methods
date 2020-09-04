@@ -2,7 +2,7 @@
 const path = require("path");
 const { name, version } = require("./package.json");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const TerserWebpackPlugin = require('terser-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 let chunkName = `${name}-v${version}`;
 // -后的首字母转大写
@@ -43,7 +43,7 @@ module.exports = {
   optimization: {
     minimize: true,
     minimizer: [
-      new TerserWebpackPlugin({
+      new TerserPlugin({
         // 只压缩min版本
         include: /\.min.js$/
       })
