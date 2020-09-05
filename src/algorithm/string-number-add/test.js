@@ -1,10 +1,11 @@
 /**
  * 单元测试用例
  */
+import path from 'path';
 import stringNumberAdd from './function';
 
 stringNumberAdd.test = function (describe, it, assert) {
-  describe('src/algorithm/string-number-add：字符串整数加法', function () {
+  describe(path.join(__dirname, 'function.js'), function () {
     // 异常 返回 -1
     it("1 + '9999' --> '-1'", function () {
       assert.equal(stringNumberAdd(1, '9999'), '-1');

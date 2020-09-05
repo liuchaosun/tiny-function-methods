@@ -1,7 +1,7 @@
 import algorithm from './algorithm/test.js';
-// import transform from './transform/test.js';
+import testDemo from './test-demo/test.js';
 
 export default {
+  testDemo,
   ...algorithm,
-  // ...transform
 };

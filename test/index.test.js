@@ -4,8 +4,9 @@ import AllFunctions from '../src/test';
 
 let funcList = Object.keys(AllFunctions) || [];
 
-funcList.forEach((func) => {
-  /* eslint-disable no-undef */
-  let test = AllFunctions[func] && AllFunctions[func].test;
-  test(describe, it, assert);
-});
+funcList
+  .filter((fc) => AllFunctions[fc].test && typeof AllFunctions[fc].test === 'function')
+  .forEach((fc) => {
+    /* eslint-disable no-undef */
+    AllFunctions[fc].test(describe, it, assert);
+  });

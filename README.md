@@ -25,4 +25,6 @@
    npm install --save tiny-function-methods
    ```
 
-## TDD Test-Driven Development
+## Test-Driven Development(TDD)
+
+测试驱动开发，需要先编写测试用例，再实现代码，测试用例需要覆盖业务所有需求场景。
