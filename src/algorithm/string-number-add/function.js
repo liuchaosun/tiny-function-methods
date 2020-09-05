@@ -1,11 +1,11 @@
 /**
  * 整数字符串数字相加，解决数字长度超限问题
+ * 目前只支持正整数
  * @param first 字符串整数
  * @param last 字符串整数
  */
 const stringNumberAdd = function (first, last) {
   if (typeof first !== 'string' || typeof last !== 'string') {
-    console.error("function stringNumberAdd's paramter must be string \n");
     return '-1';
   }
   let flen = first.length - 1;
@@ -43,7 +43,5 @@ const stringNumberAdd = function (first, last) {
 
   return total;
 };
-
-stringNumberAdd.filepath = 'src/algorithm/string-number-add';
 
 export default stringNumberAdd;

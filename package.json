@@ -4,9 +4,9 @@
   "description": "一个小而精美的函数集合",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
-    "cover": "nyc npm run test",
-    "build": "webpack"
+    "test": "nyc mocha",
+    "build": "npm run test && webpack",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
