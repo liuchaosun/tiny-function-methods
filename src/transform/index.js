@@ -1,1 +1,5 @@
-export { default as firstCharToUppercase } from './first-char-to-uppercase';
+import firstCharToUppercase from './first-char-to-uppercase/function';
+
+export default {
+  firstCharToUppercase,
+};

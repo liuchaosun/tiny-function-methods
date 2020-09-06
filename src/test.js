@@ -1,7 +1,9 @@
-import algorithm from './algorithm/test.js';
-import testDemo from './test-demo/test.js';
+import algorithm from './algorithm/test';
+import transform from './transform/test';
+import optimization from './optimization/test';
 
 export default {
-  testDemo,
   ...algorithm,
+  ...transform,
+  ...optimization,
 };

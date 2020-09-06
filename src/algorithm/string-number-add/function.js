@@ -10,7 +10,6 @@ const stringNumberAdd = function (first, last) {
   }
   let flen = first.length - 1;
   let llen = last.length - 1;
-
   let total = '';
   let carry = 0;
   while (flen >= 0 || llen >= 0) {
@@ -27,20 +26,17 @@ const stringNumberAdd = function (first, last) {
     }
     // ftmp + ltmp 当前位求和， 考虑可能有进位 + carry
     sum = ftmp + ltmp + carry;
-
     if (sum >= 10) {
       carry = 1;
       sum = sum - 10;
     } else {
       carry = 0;
     }
-
     total = sum + total;
   }
   if (carry > 0) {
     total = '1' + total;
   }
-
   return total;
 };
 
